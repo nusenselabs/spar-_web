@@ -44,6 +44,7 @@
   const stripTags = (html) => html.replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 
   let lang = 'da';
+  const toEnglishNumbers = (text) => text.replace(/(\d),(\d)/g, '$1.$2').replace(/\bkr\./g, 'kr');
 
   function t(key) {
     const dict = lang === 'en' ? EN : DA;
@@ -70,6 +71,11 @@
     });
     document.querySelectorAll('[data-i18n-alt]').forEach((el) => {
       el.setAttribute('alt', stripTags(t(el.dataset.i18nAlt)));
+    });
+    // Untranslated amounts: Danish decimal commas and "kr." become "9.00 kr" in English.
+    document.querySelectorAll('[data-i18n-num]').forEach((el) => {
+      if (!('daText' in el.dataset)) el.dataset.daText = el.textContent;
+      el.textContent = lang === 'en' ? toEnglishNumbers(el.dataset.daText) : el.dataset.daText;
     });
     // Images with text on them (product labels) have one file per language.
     document.querySelectorAll('[data-i18n-src]').forEach((el) => {
