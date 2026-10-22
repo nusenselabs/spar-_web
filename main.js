@@ -90,15 +90,12 @@
     updateMenuLabel();
     renderThemeToggle();
 
+    // The choice is remembered in the browser, so the address stays clean (no "?lang=").
     try { localStorage.setItem(STORAGE_KEY, lang); } catch (_) { /* storage unavailable */ }
-    try {
-      const url = new URL(window.location.href);
-      url.searchParams.set('lang', lang);
-      history.replaceState(null, '', url);
-    } catch (_) { /* e.g. sandboxed previews */ }
   }
 
   function initialLanguage() {
+    // A shared link like "?lang=en" still opens in that language; the parameter is then tidied away.
     const fromUrl = new URLSearchParams(window.location.search).get('lang');
     if (fromUrl === 'en' || fromUrl === 'da') return fromUrl;
     try {
@@ -354,6 +351,35 @@
   systemDark.addEventListener('change', (e) => { if (!savedTheme()) setTheme(e.matches ? 'dark' : 'light', false); });
 
   swapThemeAssets(currentTheme());
+
+  /* ---------- Clean addresses ---------- */
+
+  // In-page links (the logo, "How it works", "Questions", the store buttons) scroll to their section
+  // without adding "#how" or "#top" to the address. New tabs and modified clicks behave as normal.
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href^="#"]');
+    if (!link || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const target = document.getElementById(link.getAttribute('href').slice(1));
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: motionOK ? 'smooth' : 'auto' });
+    // "Skip to content" also moves keyboard focus, as a real jump would.
+    if (link.classList.contains('skip-link')) {
+      target.setAttribute('tabindex', '-1');
+      target.focus({ preventScroll: true });
+    }
+  });
+
+  // Links from other pages ("/#faq") and shared links ("?lang=en") still land in the right place and
+  // language; once there, the address is tidied back to just the page.
+  window.addEventListener('load', () => {
+    if (!window.location.search && !window.location.hash) return;
+    // The browser's own jump to "#faq" happens before images and scaled mock-ups settle, so go there
+    // again once everything has loaded.
+    const target = window.location.hash ? document.getElementById(decodeURIComponent(window.location.hash.slice(1))) : null;
+    try { history.replaceState(null, '', window.location.pathname); } catch (_) { /* e.g. sandboxed previews */ }
+    if (target) setTimeout(() => target.scrollIntoView({ behavior: 'instant' }), 0);
+  });
 
   applyLanguage(initialLanguage());
 })();
