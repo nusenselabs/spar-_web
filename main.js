@@ -305,7 +305,7 @@
   const DARK_ASSETS = new Set([
     'icons/logo.svg', 'icons/circle-check-small.svg', 'icons/plus.svg', 'icons/minus.svg', 'icons/product-action.svg',
     'icons/circle-check.svg', 'icons/shopping-bag.svg', 'icons/map-pin.svg', 'icons/list-tree.svg', 'icons/circle-plus.svg',
-    'icons/graphic-eq.svg', 'icons/camera.svg', 'icons/arrow-up-right.svg',
+    'icons/graphic-eq.svg', 'icons/camera.svg', 'icons/arrow-up-right.svg', 'icons/search.svg',
     'illustrations/perched.svg', 'illustrations/pecking.svg', 'illustrations/curious.svg'
   ]);
   // These sit on surfaces that look the same in both themes, so they keep their original art.

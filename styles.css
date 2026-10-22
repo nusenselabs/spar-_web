@@ -1,4 +1,11 @@
 /* Sparø — tokens from the Figma "Sparo" variables */
+
+/* Plus Jakarta Sans, served from this site (no Google Fonts request, so visitors' IP addresses stay here). */
+@font-face { font-family: "Plus Jakarta Sans"; font-weight: 400; font-display: swap; src: url("assets/fonts/PlusJakartaSans_400Regular.ttf") format("truetype"); }
+@font-face { font-family: "Plus Jakarta Sans"; font-weight: 500; font-display: swap; src: url("assets/fonts/PlusJakartaSans_500Medium.ttf") format("truetype"); }
+@font-face { font-family: "Plus Jakarta Sans"; font-weight: 600; font-display: swap; src: url("assets/fonts/PlusJakartaSans_600SemiBold.ttf") format("truetype"); }
+@font-face { font-family: "Plus Jakarta Sans"; font-weight: 700; font-display: swap; src: url("assets/fonts/PlusJakartaSans_700Bold.ttf") format("truetype"); }
+
 :root {
   --brand-primary: #00422e;
   --text-brand: #00422e;
@@ -373,6 +380,50 @@ so parallax and scaling keep the UI locked to the phone. */
 .trip__guidance { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 28px; }
 .trip__guidance > .body { max-width: 30em; }
 
+/* ---------- More than offers: features + promise ---------- */
+.more > .container { padding-top: 32px; padding-bottom: 96px; display: flex; flex-direction: column; gap: 40px; }
+.more__head { display: flex; flex-direction: column; gap: 16px; max-width: 720px; }
+.features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.feature {
+  display: flex; flex-direction: column; gap: 12px; padding: 28px;
+  background: var(--surface-default); border: 1px solid var(--border-subtle); border-radius: var(--radius-card);
+  box-shadow: var(--shadow-surface);
+}
+.feature__icon { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: var(--radius-pill); background: var(--surface-sage); }
+.feature__tag { align-self: flex-start; height: 28px; padding: 4px 12px; border-radius: var(--radius-chip); background: #fee951; color: #00422e; font-size: 13px; line-height: 20px; font-weight: 600; white-space: nowrap; }
+.promise {
+  display: flex; align-items: center; gap: 32px; padding: 36px 40px;
+  background: var(--surface-sage); border-radius: var(--radius-panel);
+}
+.promise__text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+.promise__list { display: flex; flex-wrap: wrap; gap: 10px; }
+.promise__list li { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: var(--radius-pill); background: var(--surface-default); font-size: 14px; line-height: 20px; font-weight: 500; }
+.promise a { text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- Legal and help pages ---------- */
+/* Each page holds both languages; the one not chosen is hidden (Danish shows when JavaScript is off). */
+html[lang="en"] .only-da, html[lang="da"] .only-en, html:not([lang="en"]) .only-en { display: none; }
+.legal > .container { padding-top: 24px; padding-bottom: 96px; }
+.legal__doc { max-width: 760px; display: flex; flex-direction: column; gap: 14px; }
+.legal__doc .display { margin-bottom: 4px; }
+.legal__meta { font-size: 14px; line-height: 20px; color: var(--text-muted); margin-bottom: 8px; }
+.legal__doc h2 { font-size: 20px; line-height: 26px; font-weight: 700; color: var(--ink); margin-top: 22px; }
+.legal__doc p, .legal__doc li { font-size: 16px; line-height: 26px; color: var(--text-primary); }
+.legal__doc ul { list-style: disc; padding-left: 22px; display: flex; flex-direction: column; gap: 8px; }
+.legal__doc a { text-decoration: underline; text-underline-offset: 3px; }
+.legal__note { padding: 20px 24px; border-radius: var(--radius-card); background: var(--surface-sage); }
+.legal__note p { color: var(--ink); }
+.legal__table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 22px; }
+.legal__table th, .legal__table td { text-align: left; vertical-align: top; padding: 12px 10px; border-bottom: 1px solid var(--border-subtle); color: var(--text-primary); }
+.legal__table th { font-weight: 600; color: var(--ink); }
+@media (max-width: 640px) {
+  .legal__table, .legal__table thead, .legal__table tbody, .legal__table tr, .legal__table th, .legal__table td { display: block; }
+  .legal__table thead { display: none; }
+  .legal__table tr { padding: 12px 0; border-bottom: 1px solid var(--border-subtle); }
+  .legal__table td { border: 0; padding: 2px 0; }
+  .legal__table td:first-child { font-weight: 600; color: var(--ink); }
+}
+
 /* ---------- FAQ ---------- */
 
 .faq__inner { display: flex; align-items: flex-start; gap: 112px; padding-top: 80px; padding-bottom: 104px; }
@@ -549,6 +600,8 @@ like the other sections */
   .split-heading { flex-direction: column; align-items: flex-start; gap: 24px; }
   .split-heading__title--740 { width: 100%; }
   .faq__inner { flex-direction: column; gap: 40px; }
+  .features { grid-template-columns: minmax(0, 1fr); }
+  .promise { flex-direction: column; align-items: flex-start; padding: 28px 24px; }
   .faq__intro { width: 100%; max-width: 520px; }
   .app-card { flex-direction: column; }
   .app-card__photo { width: 100%; min-height: 0; height: 300px; }

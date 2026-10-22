@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title data-i18n="meta.title">Sparø.dk · Fra tilbud til indkøbstur</title>
   <meta name="description" data-i18n-content="meta.description" content="Find dagligvaretilbud tæt på dig. Vælg dem, du vil have, og lad Sparø samle din indkøbsliste — automatisk fordelt på butikker.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=24">
+  <link rel="stylesheet" href="styles.css?v=25">
   <script>
     // Theme before first paint: the visitor's saved choice, otherwise the system setting.
     (function () {
@@ -349,6 +346,44 @@
     </div>
   </section>
 
+  <!-- More than offers: what else Sparø does, and the privacy promise -->
+  <section class="more" id="more">
+    <div class="container">
+      <div class="more__head" data-stagger>
+        <h2 class="display display--lg" data-reveal="headline" data-i18n="more.title">Alle aviser. Én søgning.</h2>
+        <p class="body text-muted" data-i18n="more.lead">Sparø samler tilbudsaviserne fra de danske supermarkeder og viser, hvor varerne på din liste er billigst lige nu, også varer fra Stop madspild.</p>
+      </div>
+      <div class="features" data-stagger style="--stagger: 110ms">
+        <article class="feature">
+          <span class="feature__icon"><img src="assets/icons/search.svg" width="24" height="24" alt=""></span>
+          <h3 class="heading" data-i18n="more.f1.title">Søg på tværs af aviserne</h3>
+          <p class="body-sm text-muted" data-i18n="more.f1.text">Skriv "kaffe", "ost" eller "grøntsager" og se alle tilbud i nærheden, sorteret efter afstand, pris eller kilopris.</p>
+        </article>
+        <article class="feature">
+          <span class="feature__tag">Stop madspild</span>
+          <h3 class="heading" data-i18n="more.f2.title">Nedsat før det er for sent</h3>
+          <p class="body-sm text-muted" data-i18n="more.f2.text">Se varer med kort holdbarhed, som Netto, føtex og Bilka nær dig har sat ned.</p>
+        </article>
+        <article class="feature">
+          <span class="feature__icon"><img src="assets/icons/list-tree.svg" width="24" height="24" alt=""></span>
+          <h3 class="heading" data-i18n="more.f3.title">Én indkøbsliste</h3>
+          <p class="body-sm text-muted" data-i18n="more.f3.text">Sæt tilbud og dine egne varer på listen. Den ligger kun på din telefon.</p>
+        </article>
+      </div>
+      <div class="promise" data-reveal="scale">
+        <div class="promise__text">
+          <h3 class="heading" data-i18n="more.promise.title">Gratis, uden reklamer og uden konto</h3>
+          <p class="body text-muted" data-i18n="more.promise.text">Sparø er et privat, ikke-kommercielt projekt. Appen sporer dig ikke, og din placering og din indkøbsliste gemmes kun på din egen telefon. Læs mere i <a href="privacy/">privatlivspolitikken</a>.</p>
+        </div>
+        <ul class="promise__list">
+          <li><img src="assets/icons/circle-check-small.svg" width="20" height="20" alt=""><span data-i18n="more.promise.free">Gratis</span></li>
+          <li><img src="assets/icons/circle-check-small.svg" width="20" height="20" alt=""><span data-i18n="more.promise.ads">Ingen reklamer</span></li>
+          <li><img src="assets/icons/circle-check-small.svg" width="20" height="20" alt=""><span data-i18n="more.promise.account">Ingen konto</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- Questions -->
   <section class="faq" id="faq">
     <div class="container faq__inner">
@@ -404,6 +439,9 @@
         <nav class="app-card__links" aria-label="Sidefod" data-i18n-aria="a11y.footerNav">
           <a href="#how" data-i18n="nav.how">Sådan virker det</a>
           <a href="#faq" data-i18n="footer.faq">Spørgsmål og svar</a>
+          <a href="support/" data-i18n="footer.support">Hjælp og kontakt</a>
+          <a href="privacy/" data-i18n="footer.privacy">Privatlivspolitik</a>
+          <a href="terms/" data-i18n="footer.terms">Vilkår</a>
         </nav>
       </div>
       <img class="app-card__photo" data-parallax="0.05" src="assets/images/groceries-at-home.jpg" width="464" height="488" alt="" data-i18n-alt="alt.home" loading="lazy">
@@ -416,7 +454,7 @@
   </div>
 </footer>
 
-<script src="i18n.js?v=24"></script>
-<script src="main.js?v=24"></script>
+<script src="i18n.js?v=25"></script>
+<script src="main.js?v=25"></script>
 </body>
 </html>

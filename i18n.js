@@ -75,6 +75,21 @@ window.SPARO_EN = {
   'trip.title': 'In the store?<br>Open the list<br>for that store.',
   'trip.lead': 'You’ll only see the items you picked for that store, and you tick them off as you go.',
 
+  // More than offers
+  'more.title': 'Every leaflet. One search.',
+  'more.lead': 'Sparø brings together the Danish supermarkets’ offer leaflets and shows where the things on your list are cheapest right now, including Stop madspild food-waste deals.',
+  'more.f1.title': 'Search every leaflet',
+  'more.f1.text': 'Type “coffee”, “cheese” or “vegetables” and see every offer nearby, sorted by distance, price or price per kilo.',
+  'more.f2.title': 'Reduced before it’s too late',
+  'more.f2.text': 'See short-dated items that Netto, føtex and Bilka near you have marked down.',
+  'more.f3.title': 'One shopping list',
+  'more.f3.text': 'Add offers and your own items to the list. It stays on your phone.',
+  'more.promise.title': 'Free, no ads, no account',
+  'more.promise.text': 'Sparø is a private, non-commercial project. The app doesn’t track you, and your location and shopping list are stored only on your own phone. Read more in the <a href="privacy/">privacy policy</a>.',
+  'more.promise.free': 'Free',
+  'more.promise.ads': 'No ads',
+  'more.promise.account': 'No account',
+
   // Questions
   'faq.title': 'Questions &amp; answers',
   'faq.q1': 'Are the prices on this page current offers?',
@@ -87,6 +102,18 @@ window.SPARO_EN = {
   // Footer
   'footer.title': 'Get the app.',
   'footer.faq': 'Questions &amp; answers',
+  'footer.support': 'Help &amp; contact',
+  'footer.privacy': 'Privacy policy',
+  'footer.terms': 'Terms of use',
+
+  // Help, privacy and terms pages (the page text itself is in both languages in each page)
+  'page.home': 'Home',
+  'privacy.metaTitle': 'Privacy policy · Sparø.dk',
+  'privacy.metaDescription': 'How Sparø handles your information: no account, no tracking, no ads.',
+  'terms.metaTitle': 'Terms of use · Sparø.dk',
+  'terms.metaDescription': 'Terms for using the Sparø app.',
+  'support.metaTitle': 'Help &amp; contact · Sparø.dk',
+  'support.metaDescription': 'Answers to questions about Sparø, and how to contact us.',
   'footer.disclaimer': 'All offers and prices on this page are examples. Store names do not imply partnerships.',
   'footer.lang': 'Denmark · English',
 

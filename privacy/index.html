@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="privacy.metaTitle">Privatlivspolitik · Sparø.dk</title>
+  <meta name="description" data-i18n-content="privacy.metaDescription" content="Sådan behandler Sparø dine oplysninger: ingen konto, ingen sporing, ingen reklamer.">
+  <link rel="stylesheet" href="../styles.css?v=25">
+  <script>
+    // Theme before first paint: the visitor's saved choice, otherwise the system setting.
+    (function () {
+      var theme;
+      try { theme = localStorage.getItem('sparo-theme'); } catch (e) {}
+      if (theme !== 'light' && theme !== 'dark') theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = theme;
+    })();
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('motion');
+      setTimeout(function () { if (!window.SPARO_READY) document.documentElement.classList.remove('motion'); }, 2500);
+    }
+  </script>
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Gå til indhold</a>
+
+<header class="site-header">
+  <div class="site-header__inner container">
+    <a class="site-header__logo" href="../" aria-label="Sparø">
+      <img src="../assets/icons/logo.svg" width="134" height="36.5674" alt="Sparø">
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Hovedmenu" data-i18n-aria="a11y.mainNav">
+      <a href="../#how" data-i18n="nav.how">Sådan virker det</a>
+      <a href="../#faq" data-i18n="nav.faq">Spørgsmål</a>
+    </nav>
+    <div class="site-header__actions">
+      <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Skift til mørk tilstand">
+        <svg class="theme-toggle__icon theme-toggle__icon--moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5 8.5 8.5 0 1 0 20.5 14.6Z"/></svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+      </button>
+      <div class="lang-switch" role="group" aria-label="Sprog / Language">
+        <button type="button" class="lang-switch__btn" data-lang="da" aria-pressed="true">DA</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" data-i18n="nav.menu">Menu</button>
+    </div>
+  </div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+</header>
+
+<main id="main" class="legal">
+  <div class="container">
+    <article class="legal__doc only-da" lang="da">
+      <h1 class="display display--lg">Privatlivspolitik</h1>
+      <p class="legal__meta">Gælder fra 21. oktober 2026</p>
+      <div class="legal__note"><p><strong>Kort fortalt:</strong> Sparø har ingen konto, ingen reklamer og ingen sporing. Din placering, din indkøbsliste og dine søgninger gemmes kun på din egen telefon. Vi har ingen server og modtager ingen oplysninger om dig. For at vise vejret sender appen en afrundet placering (ca. 1 km) til vejrtjenesten Open-Meteo.</p></div>
+      
+      <h2>1. Hvem står bag</h2>
+      <p>Sparø er et privat, ikke-kommercielt projekt, udgivet under navnet Nusense Labs af Mahesh Marath, som er dataansvarlig for appen og denne hjemmeside.</p>
+      <p>Kontakt: <a href="mailto:nusense.labs@gmail.com">nusense.labs@gmail.com</a></p>
+      
+      <h2>2. Hvilke oplysninger appen bruger, og hvorfor</h2>
+      <table class="legal__table">
+        <thead><tr><th>Oplysning</th><th>Hvad den bruges til</th><th>Hvor den ender</th></tr></thead>
+        <tbody>
+          <tr><td>Din placering (GPS), hvis du giver lov</td><td>At finde butikkerne nær dig og regne afstande ud. Appen spørger først om lov, og du kan i stedet skrive et postnummer.</td><td>Beregnes og gemmes kun på din telefon.</td></tr>
+          <tr><td>Postnummer, hvis du skriver et</td><td>Det samme som ovenfor. Postnummeret slås op i en liste, der ligger i appen.</td><td>Gemmes kun på din telefon.</td></tr>
+          <tr><td>Afrundet placering (to decimaler, ca. 1 km)</td><td>At vise et vejrikon (sol, sky, regn) ved hilsenen på forsiden.</td><td>Sendes til Open-Meteo (se afsnit 3).</td></tr>
+          <tr><td>Indkøbsliste, seneste søgninger, sprog</td><td>At appen husker din liste og dine valg.</td><td>Gemmes kun på din telefon.</td></tr>
+        </tbody>
+      </table>
+      <p>Tilbuddene og Stop madspild-varerne ligger i appen, når du henter den. Appen henter dem ikke løbende og fortæller ingen, hvad du søger efter.</p>
+      
+      <h2>3. Tjenester, appen henter indhold fra</h2>
+      <p>For at vise indhold kontakter appen nogle få andre tjenester. Ligesom når en hjemmeside viser et billede, ser de din IP-adresse og almindelige tekniske oplysninger om forespørgslen. De får ikke andre oplysninger om dig fra appen.</p>
+      <ul>
+        <li><strong>Open-Meteo</strong> (vejrdata): modtager den afrundede placering. Se <a href="https://open-meteo.com/en/terms" rel="noopener">Open-Meteos vilkår og privatlivspolitik</a>.</li>
+        <li><strong>ShelfAtlas</strong> og <strong>Tjek</strong> (billeder fra tilbudsaviserne): leverer billederne af tilbuddene.</li>
+        <li><strong>Salling Group</strong> (billeder af Stop madspild-varer).</li>
+        <li><strong>Butikkernes hjemmesider</strong>: hvis du trykker på en kæde for at se hele avisen, åbnes kædens hjemmeside i din browser, og kædens egen privatlivspolitik gælder.</li>
+      </ul>
+      
+      <h2>4. Det gør vi ikke</h2>
+      <ul>
+        <li>Vi har ingen brugerkonti og beder ikke om navn, e-mail eller telefonnummer.</li>
+        <li>Vi bruger ingen analyseværktøjer, ingen fejlrapportering og ingen reklamenetværk.</li>
+        <li>Vi sporer dig ikke på tværs af apps eller hjemmesider og sælger eller deler ikke oplysninger.</li>
+        <li>Vi har ingen server, hvor dine oplysninger gemmes.</li>
+      </ul>
+      
+      <h2>5. Retsgrundlag</h2>
+      <ul>
+        <li><strong>GPS-placering:</strong> dit samtykke, som du giver i telefonens tilladelsesdialog (databeskyttelsesforordningens art. 6, stk. 1, litra a). Du kan til enhver tid trække det tilbage i telefonens indstillinger og bruge et postnummer i stedet.</li>
+        <li><strong>Vejrforespørgsel og billeder:</strong> vores legitime interesse i at kunne vise appens indhold (art. 6, stk. 1, litra f), med så få oplysninger som muligt.</li>
+      </ul>
+      
+      <h2>6. Hvor længe</h2>
+      <p>Det, der ligger på din telefon, bliver der, indtil du sletter det i appen eller sletter appen. Vi gemmer intet. Open-Meteo og billedtjenesterne gemmer deres tekniske logs efter deres egne regler.</p>
+      
+      <h2>7. Dine rettigheder</h2>
+      <p>Du har ret til indsigt, berigtigelse, sletning, begrænsning, dataportabilitet og til at gøre indsigelse. Da vi ikke opbevarer oplysninger om dig, sletter du alt ved at slette appen. Skriv gerne til os, hvis du har spørgsmål.</p>
+      <p>Du kan klage til <a href="https://www.datatilsynet.dk" rel="noopener">Datatilsynet</a>, Carl Jacobsens Vej 35, 2500 Valby.</p>
+      
+      <h2>8. Børn</h2>
+      <p>Sparø er ikke rettet mod børn under 13 år og indsamler ingen oplysninger om brugerne.</p>
+      
+      <h2>9. App Store og Google Play</h2>
+      <p>Når du henter appen, behandler Apple eller Google oplysninger om dig efter deres egne privatlivspolitikker. Vi får ingen personoplysninger om dig derfra.</p>
+      
+      <h2>10. Denne hjemmeside</h2>
+      <p>Hjemmesiden www.sparø.dk bruger ingen cookies og ingen analyseværktøjer og henter ingen skrifttyper eller scripts fra andre. Dit valg af sprog og af lys eller mørk tilstand gemmes kun i din egen browser. Siden ligger hos GitHub Pages (GitHub, Inc., USA), som ligesom alle webservere registrerer IP-adresser i tekniske logs. Se <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHubs privatlivserklæring</a>.</p>
+      
+      <h2>11. Ændringer</h2>
+      <p>Hvis vi ændrer, hvordan Sparø behandler oplysninger, opdaterer vi denne side og datoen øverst.</p>
+    </article>
+    <article class="legal__doc only-en" lang="en">
+      <h1 class="display display--lg">Privacy policy</h1>
+      <p class="legal__meta">Effective 21 October 2026</p>
+      <div class="legal__note"><p><strong>In short:</strong> Sparø has no accounts, no ads and no tracking. Your location, shopping list and searches are stored only on your own phone. We have no server and receive no information about you. To show the weather, the app sends a rounded location (about 1 km) to the weather service Open-Meteo.</p></div>
+      
+      <h2>1. Who we are</h2>
+      <p>Sparø is a private, non-commercial project published under the name Nusense Labs by Mahesh Marath, who is the data controller for the app and this website.</p>
+      <p>Contact: <a href="mailto:nusense.labs@gmail.com">nusense.labs@gmail.com</a></p>
+      
+      <h2>2. What the app uses, and why</h2>
+      <table class="legal__table">
+        <thead><tr><th>Information</th><th>What it's used for</th><th>Where it goes</th></tr></thead>
+        <tbody>
+          <tr><td>Your location (GPS), if you allow it</td><td>To find shops near you and work out distances. The app asks first, and you can enter a postcode instead.</td><td>Worked out and stored only on your phone.</td></tr>
+          <tr><td>Postcode, if you enter one</td><td>The same as above. The postcode is looked up in a list inside the app.</td><td>Stored only on your phone.</td></tr>
+          <tr><td>Rounded location (two decimals, about 1 km)</td><td>To show a weather icon (sun, cloud, rain) by the greeting on the home screen.</td><td>Sent to Open-Meteo (see section 3).</td></tr>
+          <tr><td>Shopping list, recent searches, language</td><td>So the app remembers your list and your choices.</td><td>Stored only on your phone.</td></tr>
+        </tbody>
+      </table>
+      <p>The offers and Stop madspild items come with the app when you download it. The app doesn't fetch them as you search and doesn't tell anyone what you search for.</p>
+      
+      <h2>3. Services the app loads content from</h2>
+      <p>To show content, the app contacts a few other services. As with any image on a website, they see your IP address and ordinary technical details of the request. They receive nothing else about you from the app.</p>
+      <ul>
+        <li><strong>Open-Meteo</strong> (weather data): receives the rounded location. See <a href="https://open-meteo.com/en/terms" rel="noopener">Open-Meteo's terms and privacy policy</a>.</li>
+        <li><strong>ShelfAtlas</strong> and <strong>Tjek</strong> (images from the offer leaflets): serve the offer pictures.</li>
+        <li><strong>Salling Group</strong> (pictures of Stop madspild items).</li>
+        <li><strong>The shops' websites</strong>: if you tap a chain to see its full leaflet, its website opens in your browser and the chain's own privacy policy applies.</li>
+      </ul>
+      
+      <h2>4. What we don't do</h2>
+      <ul>
+        <li>There are no user accounts, and we never ask for your name, email or phone number.</li>
+        <li>We use no analytics, no crash reporting and no ad networks.</li>
+        <li>We don't track you across apps or websites, and we don't sell or share information.</li>
+        <li>We have no server where your information is stored.</li>
+      </ul>
+      
+      <h2>5. Legal basis</h2>
+      <ul>
+        <li><strong>GPS location:</strong> your consent, given in your phone's permission dialog (GDPR Article 6(1)(a)). You can withdraw it at any time in your phone's settings and use a postcode instead.</li>
+        <li><strong>Weather request and images:</strong> our legitimate interest in showing the app's content (Article 6(1)(f)), using as little information as possible.</li>
+      </ul>
+      
+      <h2>6. How long</h2>
+      <p>What's on your phone stays there until you delete it in the app or delete the app. We store nothing. Open-Meteo and the image services keep their technical logs under their own rules.</p>
+      
+      <h2>7. Your rights</h2>
+      <p>You have the right to access, correction, deletion, restriction, data portability and to object. Since we hold no information about you, deleting the app deletes everything. Feel free to write to us with any questions.</p>
+      <p>You can complain to the Danish Data Protection Agency, <a href="https://www.datatilsynet.dk" rel="noopener">Datatilsynet</a>, Carl Jacobsens Vej 35, 2500 Valby, Denmark.</p>
+      
+      <h2>8. Children</h2>
+      <p>Sparø is not aimed at children under 13 and collects no information about its users.</p>
+      
+      <h2>9. App Store and Google Play</h2>
+      <p>When you download the app, Apple or Google process information about you under their own privacy policies. We receive no personal information about you from them.</p>
+      
+      <h2>10. This website</h2>
+      <p>The website www.sparø.dk uses no cookies and no analytics, and loads no fonts or scripts from anyone else. Your choice of language and of light or dark mode is stored only in your own browser. The site is hosted on GitHub Pages (GitHub, Inc., USA), which, like every web server, records IP addresses in technical logs. See <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub's privacy statement</a>.</p>
+      
+      <h2>11. Changes</h2>
+      <p>If we change how Sparø handles information, we'll update this page and the date at the top.</p>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer" id="app">
+  <div class="container">
+    <div class="app-card">
+      <div class="app-card__content">
+        <img class="app-card__logo" src="../assets/icons/logo-inverse.svg" width="256" height="69.8601" alt="Sparø">
+        <h2 class="display display--lg3 text-inverse" data-i18n="footer.title">Hent appen.</h2>
+        <div class="store-ctas" role="group" aria-label="Hent appen" data-i18n-aria="store.get">
+          <a class="store-btn store-btn--lime" href="#app" data-store="ios" aria-label="Hent Sparø i App Store" data-i18n-aria="store.iosAria">
+            <span class="store-btn__text"><span class="store-btn__small" data-i18n="store.iosSmall">Hent i</span><span class="store-btn__name">App Store</span></span>
+            <img src="../assets/icons/arrow-up-right.svg" width="18" height="18" alt="">
+          </a>
+          <a class="store-btn store-btn--lime" href="#app" data-store="android" aria-label="Hent Sparø på Google Play" data-i18n-aria="store.androidAria">
+            <span class="store-btn__text"><span class="store-btn__small" data-i18n="store.androidSmall">Nu på</span><span class="store-btn__name">Google Play</span></span>
+            <img src="../assets/icons/arrow-up-right.svg" width="18" height="18" alt="">
+          </a>
+        </div>
+        <nav class="app-card__links" aria-label="Sidefod" data-i18n-aria="a11y.footerNav">
+          <a href="../#how" data-i18n="nav.how">Sådan virker det</a>
+          <a href="../#faq" data-i18n="footer.faq">Spørgsmål og svar</a>
+          <a href="../support/" data-i18n="footer.support">Hjælp og kontakt</a>
+          <a href="../privacy/" aria-current="page" data-i18n="footer.privacy">Privatlivspolitik</a>
+          <a href="../terms/" data-i18n="footer.terms">Vilkår</a>
+        </nav>
+      </div>
+      <img class="app-card__photo" src="../assets/images/groceries-at-home.jpg" width="464" height="488" alt="" data-i18n-alt="alt.home" loading="lazy">
+    </div>
+    <div class="site-footer__notes">
+      <p>© Sparø.dk</p>
+      <p data-i18n="footer.disclaimer">Alle tilbud og priser på siden er eksempler. Butiksnavne angiver ikke partnerskaber.</p>
+      <button type="button" class="site-footer__lang" data-lang-toggle data-i18n="footer.lang">Danmark · Dansk</button>
+    </div>
+  </div>
+</footer>
+
+<script src="../i18n.js?v=25"></script>
+<script src="../main.js?v=25"></script>
+</body>
+</html>

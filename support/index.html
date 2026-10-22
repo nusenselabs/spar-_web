@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="support.metaTitle">Hjælp og kontakt · Sparø.dk</title>
+  <meta name="description" data-i18n-content="support.metaDescription" content="Svar på spørgsmål om Sparø, og hvordan du kontakter os.">
+  <link rel="stylesheet" href="../styles.css?v=25">
+  <script>
+    // Theme before first paint: the visitor's saved choice, otherwise the system setting.
+    (function () {
+      var theme;
+      try { theme = localStorage.getItem('sparo-theme'); } catch (e) {}
+      if (theme !== 'light' && theme !== 'dark') theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = theme;
+    })();
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('motion');
+      setTimeout(function () { if (!window.SPARO_READY) document.documentElement.classList.remove('motion'); }, 2500);
+    }
+  </script>
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Gå til indhold</a>
+
+<header class="site-header">
+  <div class="site-header__inner container">
+    <a class="site-header__logo" href="../" aria-label="Sparø">
+      <img src="../assets/icons/logo.svg" width="134" height="36.5674" alt="Sparø">
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Hovedmenu" data-i18n-aria="a11y.mainNav">
+      <a href="../#how" data-i18n="nav.how">Sådan virker det</a>
+      <a href="../#faq" data-i18n="nav.faq">Spørgsmål</a>
+    </nav>
+    <div class="site-header__actions">
+      <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Skift til mørk tilstand">
+        <svg class="theme-toggle__icon theme-toggle__icon--moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5 8.5 8.5 0 1 0 20.5 14.6Z"/></svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+      </button>
+      <div class="lang-switch" role="group" aria-label="Sprog / Language">
+        <button type="button" class="lang-switch__btn" data-lang="da" aria-pressed="true">DA</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" data-i18n="nav.menu">Menu</button>
+    </div>
+  </div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+</header>
+
+<main id="main" class="legal">
+  <div class="container">
+    <article class="legal__doc only-da" lang="da">
+      <h1 class="display display--lg">Hjælp og kontakt</h1>
+      <p class="body text-muted">Har du et spørgsmål, fundet en fejl eller en idé? Skriv til <a href="mailto:nusense.labs@gmail.com?subject=Spar%C3%B8">nusense.labs@gmail.com</a>. Vi svarer normalt inden for et par dage.</p>
+      <div class="legal__note"><p>Skriv gerne, hvilken telefon du bruger, og hvad du søgte efter, hvis det handler om en fejl. Et skærmbillede hjælper også.</p></div>
+      
+      <h2>Hvilke butikker er med?</h2>
+      <p>REMA 1000, Netto, føtex, Bilka, Lidl, Coop 365discount, SuperBrugsen, Kvickly, Løvbjerg og Let-Køb. Stop madspild-varer kommer fra Netto, føtex og Bilka.</p>
+      
+      <h2>Hvorfor passer en pris ikke?</h2>
+      <p>Tilbuddene kommer fra kædernes tilbudsaviser og kan være udsolgt, gælde i færre butikker eller være ændret. Det er altid prisen i butikken, der gælder. Sig gerne til, hvis du ser en fejl.</p>
+      
+      <h2>Hvordan bruger appen min placering?</h2>
+      <p>Kun til at finde butikkerne nær dig, og kun hvis du giver lov. Du kan i stedet skrive et postnummer. Placeringen gemmes kun på din telefon. Læs mere i <a href="../privacy/">privatlivspolitikken</a>.</p>
+      
+      <h2>Hvordan skifter jeg område?</h2>
+      <p>Tryk på bynavnet øverst til venstre på forsiden, og skriv et nyt postnummer, eller brug din placering.</p>
+      
+      <h2>Hvad er Stop madspild?</h2>
+      <p>Varer med kort holdbarhed, som Salling Groups butikker sætter ned for at undgå madspild. Lageret ændrer sig hurtigt, så en vare kan være væk, når du kommer.</p>
+      
+      <h2>Hvordan sletter jeg mine data?</h2>
+      <p>Alt ligger på din telefon. Ryd indkøbslisten i appen, eller slet appen for at fjerne det hele.</p>
+      
+      <h2>Koster appen noget?</h2>
+      <p>Nej. Sparø er gratis, uden reklamer og uden køb i appen.</p>
+    </article>
+    <article class="legal__doc only-en" lang="en">
+      <h1 class="display display--lg">Help and contact</h1>
+      <p class="body text-muted">Got a question, found a bug or have an idea? Write to <a href="mailto:nusense.labs@gmail.com?subject=Spar%C3%B8">nusense.labs@gmail.com</a>. We usually reply within a few days.</p>
+      <div class="legal__note"><p>If it's about a problem, please mention which phone you use and what you searched for. A screenshot helps too.</p></div>
+      
+      <h2>Which shops are included?</h2>
+      <p>REMA 1000, Netto, føtex, Bilka, Lidl, Coop 365discount, SuperBrugsen, Kvickly, Løvbjerg and Let-Køb. Stop madspild items come from Netto, føtex and Bilka.</p>
+      
+      <h2>Why is a price wrong?</h2>
+      <p>Offers come from the chains' leaflets and may have sold out, apply in fewer shops or have changed. The price in the shop always applies. Do let us know if you spot a mistake.</p>
+      
+      <h2>How does the app use my location?</h2>
+      <p>Only to find shops near you, and only if you allow it. You can enter a postcode instead. Your location is stored only on your phone. Read more in the <a href="../privacy/">privacy policy</a>.</p>
+      
+      <h2>How do I change area?</h2>
+      <p>Tap the town name at the top left of the home screen and enter a new postcode, or use your location.</p>
+      
+      <h2>What is Stop madspild?</h2>
+      <p>Items with a short best-before date that Salling Group's shops reduce to avoid food waste. Stock changes quickly, so an item may be gone by the time you arrive.</p>
+      
+      <h2>How do I delete my data?</h2>
+      <p>Everything is on your phone. Clear the shopping list in the app, or delete the app to remove it all.</p>
+      
+      <h2>Does the app cost anything?</h2>
+      <p>No. Sparø is free, with no ads and no in-app purchases.</p>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer" id="app">
+  <div class="container">
+    <div class="app-card">
+      <div class="app-card__content">
+        <img class="app-card__logo" src="../assets/icons/logo-inverse.svg" width="256" height="69.8601" alt="Sparø">
+        <h2 class="display display--lg3 text-inverse" data-i18n="footer.title">Hent appen.</h2>
+        <div class="store-ctas" role="group" aria-label="Hent appen" data-i18n-aria="store.get">
+          <a class="store-btn store-btn--lime" href="#app" data-store="ios" aria-label="Hent Sparø i App Store" data-i18n-aria="store.iosAria">
+            <span class="store-btn__text"><span class="store-btn__small" data-i18n="store.iosSmall">Hent i</span><span class="store-btn__name">App Store</span></span>
+            <img src="../assets/icons/arrow-up-right.svg" width="18" height="18" alt="">
+          </a>
+          <a class="store-btn store-btn--lime" href="#app" data-store="android" aria-label="Hent Sparø på Google Play" data-i18n-aria="store.androidAria">
+            <span class="store-btn__text"><span class="store-btn__small" data-i18n="store.androidSmall">Nu på</span><span class="store-btn__name">Google Play</span></span>
+            <img src="../assets/icons/arrow-up-right.svg" width="18" height="18" alt="">
+          </a>
+        </div>
+        <nav class="app-card__links" aria-label="Sidefod" data-i18n-aria="a11y.footerNav">
+          <a href="../#how" data-i18n="nav.how">Sådan virker det</a>
+          <a href="../#faq" data-i18n="footer.faq">Spørgsmål og svar</a>
+          <a href="../support/" aria-current="page" data-i18n="footer.support">Hjælp og kontakt</a>
+          <a href="../privacy/" data-i18n="footer.privacy">Privatlivspolitik</a>
+          <a href="../terms/" data-i18n="footer.terms">Vilkår</a>
+        </nav>
+      </div>
+      <img class="app-card__photo" src="../assets/images/groceries-at-home.jpg" width="464" height="488" alt="" data-i18n-alt="alt.home" loading="lazy">
+    </div>
+    <div class="site-footer__notes">
+      <p>© Sparø.dk</p>
+      <p data-i18n="footer.disclaimer">Alle tilbud og priser på siden er eksempler. Butiksnavne angiver ikke partnerskaber.</p>
+      <button type="button" class="site-footer__lang" data-lang-toggle data-i18n="footer.lang">Danmark · Dansk</button>
+    </div>
+  </div>
+</footer>
+
+<script src="../i18n.js?v=25"></script>
+<script src="../main.js?v=25"></script>
+</body>
+</html>
